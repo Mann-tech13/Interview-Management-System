@@ -1,8 +1,9 @@
 import { Menubar } from 'primereact/menubar';
 import { InputText } from 'primereact/inputtext';
-import SidebarNav from '../SidebarNav/SidebarNav';
+import SidebarNav from '../SidebarNav/AdminSidebar';
 
-function Navbar() {
+function Navbar(props) {
+
     const items = [
         // {
         //     label: 'File',
@@ -136,7 +137,7 @@ function Navbar() {
 
     return (
         <div className="card">
-            <Menubar model={items} start={<SidebarNav/>} end={end} />
+            <Menubar model={items} start={props.sidebar} end={end} />
         </div>
     )
 }
