@@ -4,6 +4,7 @@ import Admin from "./components/Admin/Dashboard/Dashboard"
 import Developer from "./components/Developer/Dashboard/Dashboard"
 import HR from "./components/HR/Dashboard/Dashboard"
 import UserDeveloper from "./components/Admin/User/UserDeveloper"
+import AdminOpenings from './components/Admin/Openings/Openings';
 import UserHR from "./components/Admin/User/UserHR"
 import Candidates from "./components/HR/Candidates/Candidates"
 import Openings from "./components/HR/Openings/Openings"
@@ -19,7 +20,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/admin' element={<Admin/>}/>
-          <Route exact path='/openings' element={<Admin/>}/>
+          <Route exact path='/openings' element={<AdminOpenings/>}/>
           <Route exact path='/edithr' element={<UserHR/>}/>
           <Route exact path='/editdev' element={<UserDeveloper/>}/>
 
