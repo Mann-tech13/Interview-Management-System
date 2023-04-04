@@ -1,0 +1,20 @@
+.interview-list-container{
+    margin: 20px;
+}
+.icon-holder{
+    text-align: right;
+}
+.icon{
+    margin: 0 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.times{
+    background-color: red;
+    color: #ffffff;
+}
+.pencil{
+    background-color: blue;
+    color: #ffffff;
+}
