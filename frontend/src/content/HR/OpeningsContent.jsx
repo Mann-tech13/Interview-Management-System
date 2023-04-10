@@ -9,7 +9,7 @@ function OpeningsContent() {
     const [displayOpenings, setDisplayOpenings] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:8000/openings").then((response) => {
+        axios.get(`http://localhost:8000/openings`).then((response) => {
             setDisplayOpenings(openings => response.data)
         })
     }, [])
