@@ -33,8 +33,8 @@ public class OpeningsServicesImpl implements OpeningsServices  {
 		List<OpeningsVO> openingsListVO = new ArrayList<OpeningsVO>();
 		
 		for(int i=0; i<openingsList.size(); i++) {
-			Openings O = openingsList.get(i);
-			OpeningsVO openingsvo = new OpeningsVO(O.getJobID(), O.getJob(), O.getJobDescription(), O.getExperiance(), O.getVacancy(), O.getLocation(), O.getJobType(), O.getDate());
+			Openings openings = openingsList.get(i);
+			OpeningsVO openingsvo = new OpeningsVO(openings.getJobID(), openings.getJob(), openings.getJobDescription(), openings.getExperience(), openings.getVacancy(), openings.getLocation(), openings.getJobType(), openings.getDate());
 			openingsListVO.add(openingsvo);
 		}
 		return openingsListVO;
@@ -48,16 +48,16 @@ public class OpeningsServicesImpl implements OpeningsServices  {
 		
 		if(openingsbyid.isPresent()) {
 			O = openingsbyid.get();
-			openingsvo = new OpeningsVO(O.getJobID(), O.getJob(), O.getJobDescription(), O.getExperiance(), O.getVacancy(), O.getLocation(), O.getJobType(), O.getDate());
+			openingsvo = new OpeningsVO(O.getJobID(), O.getJob(), O.getJobDescription(), O.getExperience(), O.getVacancy(), O.getLocation(), O.getJobType(), O.getDate());
 		}
 		return openingsvo;
 	}
 	
 	@Override
 	public OpeningsVO updateOpenings(OpeningsVO openingsvo) {
-		Openings O = new Openings(openingsvo.getJobID(), openingsvo.getJob(), openingsvo.getJobDescription(), openingsvo.getExperiance(),
+		Openings openings = new Openings(openingsvo.getJobID(), openingsvo.getJob(), openingsvo.getJobDescription(), openingsvo.getExperiance(),
 				openingsvo.getVacancy(), openingsvo.getLocation(), openingsvo.getJobType(), openingsvo.getDate());
-		openingsdao.save(O);
+		openingsdao.save(openings);
 		return openingsvo;
 	}
 	

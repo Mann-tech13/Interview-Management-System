@@ -17,6 +17,7 @@ import com.project.ims.vo.HRVO;
 
 @CrossOrigin
 @RestController
+@CrossOrigin
 public class HRController {
 	
 	@Autowired

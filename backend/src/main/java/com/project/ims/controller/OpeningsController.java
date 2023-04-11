@@ -16,6 +16,7 @@ import com.project.ims.service.OpeningsServices;
 import com.project.ims.vo.OpeningsVO;
 @CrossOrigin
 @RestController
+@CrossOrigin
 public class OpeningsController {
 	
 	@Autowired
