@@ -9,11 +9,7 @@ function OpeningsContent() {
     const [displayOpenings, setDisplayOpenings] = useState([])
 
     useEffect(() => {
-<<<<<<< HEAD
         axios.get("http://localhost:8082/openings").then((response) => {
-=======
-        axios.get(`http://localhost:8000/openings`).then((response) => {
->>>>>>> c0bc264190f0b68a7648ddd6a7423603bcdbab1c
             setDisplayOpenings(openings => response.data)
         })
     }, [])
