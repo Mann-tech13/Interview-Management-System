@@ -1,24 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Card } from 'primereact/card';
 import AddOpenings from '../Forms/AddOpenings';
-import "../../assets/CSS/Admin/OpeningsContent.css"
+import "../../assets/CSS/HR/OpeningsContent.css"
+import axios from "axios"
 
 function OpeningsContent() {
     const [formVisible, setFormVisible] = useState(false)
+    const [displayOpenings, setDisplayOpenings] = useState([])
+
+    useEffect(() => {
+        axios.get("http://localhost:8082/openings").then((response) => {
+            setDisplayOpenings(openings => response.data)
+        })
+    }, [])
+
+
     return (
         <div>
             <div className="">
                 <div className="icon-container">
                     <i className='plus-btn pi pi-plus' onClick={() => setFormVisible(true)}></i>
                 </div>
-                <div className="card job-container">
-                    <Card title="Title">
-                        <p className="m-0 job-content">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
-                            numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-                        </p>
-                    </Card>
-                </div>
+                {
+                    displayOpenings.map((openings) => {
+                        return (
+                            <div className="card openings-container">
+                                <Card title={openings.job} >
+                                    <p className="m-0 content">
+                                        {openings.jobDescription}
+                                    </p>
+                                </Card>
+                            </div>
+                        )
+                    })
+                }
+
             </div>
             <div className="">
                 {formVisible && <AddOpenings visible={formVisible} setVisible={setFormVisible} />}
