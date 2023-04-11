@@ -1,3 +1,10 @@
+.candidate-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .card-container {
     width: 450px;
 }
@@ -79,7 +86,7 @@
 }
 
 .field-name,
-.field-skills-experience,
+.field-skills-expe,
 .field-CTC{
     width: 290px;
 }
