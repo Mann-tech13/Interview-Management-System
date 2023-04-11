@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.ims.entity.Candidate;
-import com.project.ims.entity.Developer;
 import com.project.ims.service.CandidateService;
 import com.project.ims.vo.CandidateVo;
 
