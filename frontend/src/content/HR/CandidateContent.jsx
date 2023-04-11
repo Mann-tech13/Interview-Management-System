@@ -23,9 +23,10 @@ function CandidateContent() {
 
     useEffect(() => {
         axios.get(`http://localhost:8000/candidate`).then((response) => {
+            console.log(response.data);
             setDisplayCandidate(candidates => response.data)
         })
-    }, [])
+    }, [formVisible])
 
 
     return (

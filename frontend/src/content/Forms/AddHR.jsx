@@ -2,7 +2,7 @@ import React from 'react'
 
 function AddHR() {
   return (
-    <div>AddHR</div>
+    <div>AddHR Form</div>
   )
 }
 
