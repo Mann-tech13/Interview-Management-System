@@ -5,7 +5,15 @@ import "../../assets/CSS/HR/OpeningsContent.css"
 
 function AddOpenings(props) {
     const{visible, setVisible} = props
-    const [openingsForm, setOpeningsForm] = useState([])
+    const [openingsForm, setOpeningsForm] = useState({
+        job: "",
+        jobDescription: "",
+        experience: "",
+        vacancy: "",
+        location: "",
+        jobType: "",
+        
+    })
     const handlePopup = (e) => {
         e.preventDefault();
         setVisible(false)
@@ -29,11 +37,10 @@ function AddOpenings(props) {
                     <input placeholder='Job' className='open field-job' type="text" name="job"  onChange={(e) => handleInputChange(e)}/>
                 </div>
                 <div className="job-desc">
-                    <input placeholder='Job description' className='open field-job-desc' type="text" name="job-desc"  onChange={(e) => handleInputChange(e)}/>
+                    <input placeholder='Job description' className='open field-job-desc' type="text" name="jobDescription"  onChange={(e) => handleInputChange(e)}/>
                 </div>
-                <div className="skills-exp">
-                    <input placeholder='Skills' className='open field-skills-exp' type="text" name='skills' />
-                    <input placeholder='Experience' className='open field-skills-exp' type="text" name='experience'  onChange={(e) => handleInputChange(e)}/>
+                <div className="exp">
+                    <input placeholder='Experience' className='open field-exp' type="text" name='experience'  onChange={(e) => handleInputChange(e)}/>
                 </div>
                 <div className="vacancy-loc">
                     <input placeholder='Vacancy' className='open field-vacancy' type="text" name='vacancy'  onChange={(e) => handleInputChange(e)}/>

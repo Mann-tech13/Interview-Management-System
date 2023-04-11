@@ -14,7 +14,7 @@ public class Openings {
 	private int jobID;
 	private String job;
 	private String jobDescription;
-	private String experiance;
+	private String experience;
 	private int vacancy;
 	private String location;
 	private String jobType;
@@ -31,7 +31,7 @@ public class Openings {
 		this.jobID = jobID;
 		this.job = job;
 		this.jobDescription = jobDescription;
-		this.experiance = experiance;
+		this.experience = experiance;
 		this.vacancy = vacancy;
 		this.location = location;
 		this.jobType = jobType;
@@ -62,12 +62,12 @@ public class Openings {
 		this.jobDescription = jobDescription;
 	}
 
-	public String getExperiance() {
-		return experiance;
+	public String getExperience() {
+		return experience;
 	}
 
-	public void setExperiance(String experiance) {
-		this.experiance = experiance;
+	public void setExperience(String experiance) {
+		this.experience = experiance;
 	}
 
 	public int getVacancy() {
