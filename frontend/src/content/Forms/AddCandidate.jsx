@@ -5,12 +5,6 @@ import "../../assets/CSS/HR/CandidateContent.css"
 
 function AddCandidate(props) {
     const{visible, setVisible, uniqueId, setUniqueId} = props
-    // console.log("*************");
-    // console.log(visible);
-    // console.log(setVisible);
-    // console.log(setVisible);
-    // console.log(setUniqueId);
-    // console.log("*************");
     const [candidateForm, setCandidateForm] = useState({
         firstName: "",
         lastName: "",
