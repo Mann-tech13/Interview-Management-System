@@ -15,7 +15,6 @@ function HRSidebar() {
                     <p onClick={() => navigate("/hropenings")}>Job Postings</p>
                     <p onClick={() => navigate("/interview")}>Interview Scheduling</p>
                     <p onClick={() => navigate("/myinterview")}>Interviews List</p>
-                    <p onClick={() => navigate("/block")}>Block</p>
                 </Sidebar>
                 <Button icon="pi pi-arrow-right" onClick={() => setVisible(true)} />
             </div>

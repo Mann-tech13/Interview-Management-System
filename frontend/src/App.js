@@ -10,7 +10,6 @@ import Candidates from "./components/HR/Candidates/Candidates"
 import Openings from "./components/HR/Openings/Openings"
 import Interview from "./components/HR/Interview/Interview"
 import InterviewList from "./components/HR/MyInterview/InterviewList"
-import Block from "./components/HR/Block/Block"
 import './App.css';
 
 function App() {
@@ -32,7 +31,6 @@ function App() {
           <Route exact path='/hropenings' element={<Openings/>}/>
           <Route exact path='/interview' element={<Interview/>}/>
           <Route exact path='/myinterview' element={<InterviewList/>}/>
-          <Route exact path='/block' element={<Block/>}/>
 
 
         </Routes>
