@@ -13,7 +13,7 @@ function InterviewContent() {
             <div><img className="profile-img-inter" alt="Card" src="https://primefaces.org/cdn/primereact/images/usercard.png" /></div>
         </div>
     );
-    const footer = (
+    const footer = () => (
         <div className="flex flex-wrap justify-content-end gap-2 edit-btn">
             <Button label="Schedule Interview" onClick={() => setFormVisible(true)}/>
         </div>
@@ -21,9 +21,6 @@ function InterviewContent() {
     return (
         <div>
             <div className={"form-data "+formVisible}>
-                {/* <div className="icon-container">
-                    <i className='plus-btn pi pi-plus' onClick={() => setFormVisible(true)}></i>
-                </div> */}
                 <div className="card flex justify-content-center card-container">
                     <Card title="Title" subTitle="Subtitle" footer={footer} header={header} className="md:w-25rem">
                         <p className="m-0 inter-content">

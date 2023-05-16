@@ -30,9 +30,6 @@ function ScheduleInterview(props) {
                 <div className="developer">
                     <input placeholder='Developer' className='input field-dev' type="text" name="developer" />
                 </div>
-                <div className="rounds">
-                    <input placeholder='Number of Rounds' className='input field-rounds' type="text" name="rounds" />
-                </div>
                 <div className="btn">
                     <Button label="Schedule" />
                 </div>
